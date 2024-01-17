@@ -28,7 +28,7 @@ nav{
 
 .container .logo img{
     margin-left: 20px;
-    width: 100px;
+    width: 80px;
     filter: drop-shadow(2px 2px 2px white);
 }
 
@@ -135,13 +135,13 @@ section .content{
 
 .content .image img{
     max-width: 350px;
-    width: 100px;
-    margin-right: 100px;
+    width: 800px;
+    margin-right: 50px;
     transform: rotate(40deg) translateX(900px);
     filter: drop-shadow(-10px -10px 200px #f74f10);
 }
 
-@media (max-width:800px){
+@media (max-width:900px){
     .content{
         display: flex;
         width: 100%;
@@ -149,7 +149,7 @@ section .content{
     }
 
     .main-content{
-        margin: 0 10px;
+        margin: o 10px;
     }
 }
 
@@ -162,6 +162,8 @@ section .content{
 @media (max-width:440px){
     .links{
         display: none;
+        /* width: 50px;
+        margin-right: 0px; */
     }
     .image img{
         width: 100px;
