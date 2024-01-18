@@ -135,8 +135,8 @@ section .content{
 
 .content .image img{
     max-width: 350px;
-    width: 800px;
-    margin-right: 50px;
+    width: 500px;
+    margin-right: 100px;
     transform: rotate(40deg) translateX(900px);
     filter: drop-shadow(-10px -10px 200px #f74f10);
 }
@@ -165,9 +165,9 @@ section .content{
         /* width: 50px;
         margin-right: 0px; */
     }
-    .image img{
-        width: 100px;
-        margin-right: none;
+    .content .image img{
+        width: 100%;
+        margin-right: 0px;
 
     }
 }
