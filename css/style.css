@@ -73,6 +73,10 @@ nav .lista{
 
 }
 
+nav.active{
+    transform: translateX(0);
+}
+
 .container .logos img{
     margin-left: 0px; /* 20px */
     width: 80px;
