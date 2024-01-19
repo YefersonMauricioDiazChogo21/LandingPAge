@@ -16,8 +16,9 @@ body{
 nav{
     width: 100%;
     height: 10hv;
-    top: 0;
+    top: 55px;
     left: 0;
+    z-index: 5;
 }
 
 .container{
@@ -58,19 +59,17 @@ p{
     color: white;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.3s linear;
-    
+    transition: 0.3s linear;  
 }
 
 nav .lista{
     width: 50%;
     position: fixed;
-    background: black;
+    background: none;
     display: flex;
     align-items: center;
     transform: translateX(-100%);
     transition: transform 0.3s;
-
 }
 
 nav.active{
@@ -84,19 +83,20 @@ nav.active{
 }
 
 .boton{
-    color: white;
+    background: black;
     width: 20px;
-    margin: 4px;
+    margin: 5px;
 }
 
 .boton .linea{
     height: 2px;
     width: 15px;
-    background: black;
+    background: white;
     margin: 4px 0;
     left: 2px;
 
 }
+
 .lista li a::before{
     content: "";
     position: absolute;
@@ -112,13 +112,6 @@ nav.active{
 .lista a:hover{
     color: #f74f10;
     width: 40%;
-
-}
-
-.container .logo img{
-    margin-left: 0px; /* 20px */
-    width: 80px;
-    filter: drop-shadow(2px 2px 2px white);
 }
 
 .container .links a{
@@ -152,7 +145,8 @@ nav.active{
     color: white;
     cursor: pointer;
     font-size: 1.3rem;
-    margin-right: 20px;
+    margin-right: 20px;   /* width: 50px;
+    margin-right: 0px; */
 }
 /*Section Starts*/
 
@@ -186,7 +180,8 @@ section .content{
     font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
 }
 
-.main-content p{
+.main-content p{   /* width: 50px;
+    margin-right: 0px; */
     margin-top: 10px;
     color: #635e5c;
 }
@@ -241,11 +236,6 @@ section .content{
         margin: o 10px;
     }
 
-    .container .logo img{
-        margin-left: 0px; /* 20px */
-        width: 0px;
-        filter: 0;
-    }
 }
 
 @media (min-width:884px){
@@ -255,17 +245,6 @@ section .content{
     
     .boton{
         display: none;
-    }
-
-    nav .lista{
-        display: flex;
-        align-items: center;
-        background: none;
-        position: fixed;
-    }
-
-    ul{
-        flex-direction: row;
     }
 }
 
@@ -278,6 +257,9 @@ section .content{
     .content .image img{
         width: 100%;
         margin-right: 0px;
+    }
 
+    .search i{
+        display: none;
     }
 }
