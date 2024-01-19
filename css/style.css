@@ -86,6 +86,7 @@ nav.active{
     background: black;
     width: 20px;
     margin: 5px;
+    border: none;
 }
 
 .boton .linea{
