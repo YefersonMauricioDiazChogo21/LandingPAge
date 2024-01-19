@@ -16,6 +16,8 @@ body{
 nav{
     width: 100%;
     height: 10hv;
+    top: 0;
+    left: 0;
 }
 
 .container{
@@ -26,8 +28,91 @@ nav{
     align-items: center;
 } 
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    max-width: 1024px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li a{
+    padding: 0 16px;
+    color: white;
+}
+
+p{
+    margin: 0;
+}
+
+.logos{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s linear;
+    
+}
+
+nav .lista{
+    width: 50%;
+    position: fixed;
+    background: black;
+    display: flex;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+
+}
+
+.container .logos img{
+    margin-left: 0px; /* 20px */
+    width: 80px;
+    filter: drop-shadow(2px 2px 2px white) 
+}
+
+.boton{
+    color: white;
+    width: 20px;
+    margin: 4px;
+}
+
+.boton .linea{
+    height: 2px;
+    width: 15px;
+    background: black;
+    margin: 4px 0;
+    left: 2px;
+
+}
+.lista li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    background-color: #f74f10;
+    height: 3.5px;
+    transition: 0.3s linear;
+}
+
+.lista li a:hover:before,
+.lista a:hover{
+    color: #f74f10;
+    width: 40%;
+
+}
+
 .container .logo img{
-    margin-left: 20px;
+    margin-left: 0px; /* 20px */
     width: 80px;
     filter: drop-shadow(2px 2px 2px white);
 }
@@ -151,11 +236,32 @@ section .content{
     .main-content{
         margin: o 10px;
     }
+
+    .container .logo img{
+        margin-left: 0px; /* 20px */
+        width: 0px;
+        filter: 0;
+    }
 }
 
 @media (min-width:884px){
     .content .image img{
         min-width: 500px;
+    }
+    
+    .boton{
+        display: none;
+    }
+
+    nav .lista{
+        display: flex;
+        align-items: center;
+        background: none;
+        position: fixed;
+    }
+
+    ul{
+        flex-direction: row;
     }
 }
 
